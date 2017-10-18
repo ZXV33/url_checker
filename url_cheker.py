@@ -2,13 +2,9 @@
 # -*- coding: utf-8 -*-
 
 from selenium import webdriver
-#from selenium.webdriver.common.keys import Keys
 import csv
 import sys
 import time
-
-#from pyvirtualdisplay import Display
-#display = Display(visible=0, size=(1024, 768))
 
 # CSV読み込み
 try:
@@ -19,9 +15,8 @@ except:
 
 
 # proxy connetion setting
-proxy = 'http://192.168.79.92:8080'
-proxy_ip = '192.168.79.92'
-proxy_port = 8080
+proxy_ip = '${your ip}'
+proxy_port = ${your port}
 profile = webdriver.FirefoxProfile()
 profile.set_preference('network.proxy.type', 1) 
 profile.set_preference('network.proxy.share_proxy_settings', True) 
